@@ -136,6 +136,9 @@ app.post('/api/check-domain', async (req, res) => {
         res.status(500).json({ error: 'Failed to check domain availability' });
     }
 });
+app.get('/', (req, res) => {
+    res.send('✅ 20i Backend Server is running successfully');
+});
 
 app.listen(PORT, () => {
     console.log(`20i Backend server running on http://localhost:${PORT}`);
